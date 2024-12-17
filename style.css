@@ -182,3 +182,47 @@ button:hover {
         transform: translateY(0); /* Posisi normal */
     }
 }
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%; /* Lebar container lebih kecil untuk layar lebih kecil */
+        box-shadow: none; /* Menghapus bayangan pada layar kecil */
+    }
+
+    #terdaftar, #invalid, #kosong {
+        font-size: 14px; /* Mengurangi ukuran font pada layar kecil */
+        top: 55%; /* Mengatur ulang posisi vertical */
+    }
+
+    input[type="text"], input[type="password"], button {
+        width: 100%; /* Lebar input dan tombol mengikuti lebar container */
+    }
+
+    .header {
+        font-size: 24px; /* Mengurangi ukuran font header */
+        padding: 8px 0; /* Menyesuaikan padding */
+    }
+
+    #sign-in-success {
+        width: 100%; /* Memastikan lebar sign-in success menyesuaikan layar kecil */
+    }
+
+    #loading-screen p {
+        font-size: 14px; /* Mengurangi ukuran font loading */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        font-size: 20px; /* Lebih kecil pada layar ponsel */
+    }
+
+    input[type="text"], input[type="password"], button {
+        padding: 8px; /* Mengurangi padding pada input dan tombol */
+        font-size: 14px; /* Mengurangi ukuran font */
+    }
+
+    #terdaftar, #invalid, #kosong {
+        font-size: 12px; /* Ukuran font lebih kecil pada ponsel */
+    }
+}
