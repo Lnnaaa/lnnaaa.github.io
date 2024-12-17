@@ -16,10 +16,10 @@ body {
     color: red;
     font-size: small;
     position: absolute;
-    top: 53.5%;
-    transform: translateY(-53%);
-    right: 50%;
-    transform: translate(50%, -50%);
+    top: 53.5%; /* Menyusun vertikal di tengah */
+    transform: translateY(-53%); /* Menyesuaikan posisi vertikal agar benar-benar di tengah */
+    right: 50%; /* Mengatur elemen berada di tengah horizontal */
+    transform: translate(50%, -50%); /* Menyesuaikan agar elemen berada tepat di tengah */
 }
 
 #h3-success {
@@ -36,8 +36,8 @@ body {
     width: 100%;
     height: 100%;
     background: linear-gradient(-45deg, #94c6ff, #94fff1, #94fff6, #94ffa1, #baff94);
-    background-size: 400% 400%;
-    animation: gradientAnimation 10s ease infinite;
+    background-size: 400% 400%; /* Ukuran background lebih besar untuk efek animasi */
+    animation: gradientAnimation 10s ease infinite; /* Animasi berjalan 10 detik, terus berulang */
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -51,6 +51,8 @@ body {
     height: 100px;
     overflow: hidden;
     text-align: center;
+    /* animation: fadeIn 1s ease-out;
+    animation-delay: 2s; */
 }
 
 .container {
@@ -100,6 +102,7 @@ button {
     border-radius: 5px;
 }
 
+/* Loading Screen */
 #loading-screen {
     position: fixed;
     top: 0;
@@ -114,15 +117,17 @@ button {
     z-index: 1000;
 }
 
+/* Loader Animation (Bulat Berputar) */
 .loader {
     border: 8px solid white;
-    border-top: 8px solid #94c6ff;
+    border-top: 8px solid #94c6ff; /* Warna biru */
     border-radius: 50%;
     width: 50px;
     height: 50px;
     animation: spin 1s linear infinite;
 }
 
+/* Teks Loading */
 #loading-screen p {
     margin-top: 10px;
     font-size: 16px;
@@ -146,29 +151,37 @@ button:hover {
 }
 
 /* Animasi */
+
+/* Animasi Gradient Background */
 @keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
+/* Animasi Berputar */
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
 
+/* Animasi Fade-in untuk Container */
 @keyframes fadeIn {
     0% {
-        opacity: 0;
-        transform: translateY(-20px);
+        opacity: 0; /* Elemen transparan */
+        transform: translateY(-20px); /* Bergerak dari atas ke bawah */
     }
     100% {
-        opacity: 1;
-        transform: translateY(0);
+        opacity: 1; /* Elemen terlihat sepenuhnya */
+        transform: translateY(0); /* Posisi normal */
     }
 }
-
-/* Media Queries untuk Responsivitas */
 
 @media screen and (max-width: 768px) {
     .container {
