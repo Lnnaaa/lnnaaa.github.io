@@ -13,28 +13,28 @@ body {
 }
 
 #invalid {
-    top: 515px;
+    top: 55%;
     color: red;
     font-size: small;
     margin: -7.5px;
     position: absolute;
-    right: 948.5px;
+    right: 49.25%;
 }
 
 #terdaftar {
-    top: 515px;
+    top: 55%;
     color: red;
     font-size: small;
     margin: -7.5px;
     position: absolute;
-    right: 982.5px;
+    right: 51%;
 }
 
 #h3-success {
     position: absolute;
     text-align: center;
-    right: 885px;
-    top: 465px;
+    right: 46%;
+    top: 50%;
 }
 
 #loading-screen-table {
@@ -70,8 +70,8 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     text-align: center;
-    animation: fadeIn 1s ease-out;
-    animation-delay: 2s;
+    /* animation: fadeIn 1s ease-out;
+    animation-delay: 2s; */
 }
 
 .header {
