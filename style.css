@@ -12,16 +12,9 @@ body {
     height: 100vh;
 }
 
-#invalid {
+#terdaftar, #invalid {
     /* top: 55%; */
-    color: red;
-    font-size: small;
-    margin: -7.5px;
-    /* right: 49.25%; */
-}
-
-#terdaftar {
-    /* top: 55%; */
+    position: fixed;
     color: red;
     font-size: small;
     margin: -7.5px;
@@ -68,8 +61,8 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     text-align: center;
-    /* animation: fadeIn 1s ease-out;
-    animation-delay: 2s; */
+    animation: fadeIn 1s ease-out;
+    animation-delay: 2s;
 }
 
 .header {
