@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javagram</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader"></div>
+        <p>Loading...</p>
+    </div>
+    <div id="loading-screen-table" class="hidden">
+        <div class="loader"></div>
+        <p>Loading...</p>
+    </div>
+    <div class="container">
+        <div class="header">Javagram</div>
+        <!-- Succes Login Screen -->
+        <div id="sign-in-success" class="hidden">
+            <h3 id="h3-success">Sign In berhasil!</h3>
+        </div>
+        <div class="content" id="form-section">
+            <!-- Sign In Form -->
+            <div id="sign-in-form" class="hidden">
+                <h3>Sign In</h3>
+                <p id="invalid" class="hidden">Password atau Username salah!</p>
+                <input type="text" id="signin-username" placeholder="Username" />
+                <input type="password" id="signin-password" placeholder="Password" />
+                <input type="checkbox" id="check" onclick="showPassword()">Show Password
+                <button onclick="signIn()">Login</button>
+                <a href="#Sign-in" onclick="showSignUp()">
+                    <button>Buat akun</button>
+                </a>
+            </div>
+
+            <!-- Sign Up Form -->
+            <div id="sign-up-form" class="">
+                <h3>Sign Up</h3>
+                <p id="terdaftar" class="hidden">Username sudah terdaftar!</p>
+                <input type="text" id="signup-username" placeholder="Username" />
+                <input type="password" id="signup-password" placeholder="Password" />
+                <input type="checkbox" id="check" onclick="showPassword()">Show Password
+                <button onclick="signUp()">Daftar</button>
+                <a href="#Sign-up" class="button" onclick="showSignIn()">
+                    <button>Masuk</button>
+                </a>
+            </div>
+
+            <!-- Info Akun -->
+            <div id="info-akun" class="hidden">
+                <h3>Informasi Akun</h3>
+                <p id="info-username"></p>
+                <p id="info-created-at"></p>
+                <button onclick="logout()">Logout</button>
+                <button class="danger-btn" onclick="deleteAccount()">Hapus Akun</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
