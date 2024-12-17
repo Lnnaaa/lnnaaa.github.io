@@ -13,11 +13,14 @@ function saveAccounts(accounts) {
 // }
 
 function showSignUp() {
+    document.getElementById('invalid').classList.add('hidden');
     document.getElementById('sign-in-form').classList.add('hidden');
     document.getElementById('sign-up-form').classList.remove('hidden');
 }
 
 function showSignIn() {
+    document.getElementById('kosong').classList.add('hidden');
+    document.getElementById('terdaftar').classList.add('hidden');
     document.getElementById('sign-up-form').classList.add('hidden');
     document.getElementById('sign-in-form').classList.remove('hidden');
 }
@@ -47,7 +50,11 @@ function signUp() {
     const password = document.getElementById('signup-password').value.trim();
 
     if (!username || !password) {
-        alert('Username dan Password tidak boleh kosong!');
+        setTimeout(function(){
+            document.getElementById('kosong').classList.remove('hidden');
+        }, 500);
+        document.getElementById('terdaftar').classList.add('hidden');
+        document.getElementById('kosong').classList.add('hidden');
         return;
     }
 
@@ -56,6 +63,7 @@ function signUp() {
         setTimeout(function(){
             document.getElementById('terdaftar').classList.remove('hidden');
         }, 500);
+        document.getElementById('kosong').classList.add('hidden');
         document.getElementById('terdaftar').classList.add('hidden');
         return;
     }
@@ -136,7 +144,7 @@ window.addEventListener("load", function () {
 
         // Tampilkan konten utama
         content.classList.remove("hidden");
-    }, 2000); // 3000ms = 3 detik
+    }, 0); // 3000ms = 3 detik
 });
 
 // Cek apakah user sudah login sebelumnya

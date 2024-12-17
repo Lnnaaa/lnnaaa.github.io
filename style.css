@@ -12,13 +12,14 @@ body {
     height: 100vh;
 }
 
-#terdaftar, #invalid {
-    /* top: 55%; */
-    position: fixed;
+#terdaftar, #invalid, #kosong {
     color: red;
     font-size: small;
-    margin: -7.5px;
-    /* right: 51%; */
+    position: absolute;
+    top: 53.5%;
+    transform: translateY(-53%);
+    right: 50%;
+    transform: translate(50%, -50%);
 }
 
 #h3-success {
@@ -35,8 +36,8 @@ body {
     width: 100%;
     height: 100%;
     background: linear-gradient(-45deg, #94c6ff, #94fff1, #94fff6, #94ffa1, #baff94);
-    background-size: 400% 400%; /* Ukuran background lebih besar untuk efek animasi */
-    animation: gradientAnimation 10s ease infinite; /* Animasi berjalan 10 detik, terus berulang */
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -50,8 +51,6 @@ body {
     height: 100px;
     overflow: hidden;
     text-align: center;
-    /* animation: fadeIn 1s ease-out;
-    animation-delay: 2s; */
 }
 
 .container {
@@ -101,7 +100,6 @@ button {
     border-radius: 5px;
 }
 
-/* Loading Screen */
 #loading-screen {
     position: fixed;
     top: 0;
@@ -116,17 +114,15 @@ button {
     z-index: 1000;
 }
 
-/* Loader Animation (Bulat Berputar) */
 .loader {
     border: 8px solid white;
-    border-top: 8px solid #94c6ff; /* Warna biru */
+    border-top: 8px solid #94c6ff;
     border-radius: 50%;
     width: 50px;
     height: 50px;
     animation: spin 1s linear infinite;
 }
 
-/* Teks Loading */
 #loading-screen p {
     margin-top: 10px;
     font-size: 16px;
@@ -150,34 +146,70 @@ button:hover {
 }
 
 /* Animasi */
-
-/* Animasi Gradient Background */
 @keyframes gradientAnimation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-/* Animasi Berputar */
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
 
-/* Animasi Fade-in untuk Container */
 @keyframes fadeIn {
     0% {
-        opacity: 0; /* Elemen transparan */
-        transform: translateY(-20px); /* Bergerak dari atas ke bawah */
+        opacity: 0;
+        transform: translateY(-20px);
     }
     100% {
-        opacity: 1; /* Elemen terlihat sepenuhnya */
-        transform: translateY(0); /* Posisi normal */
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries untuk Responsivitas */
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%; /* Lebar container lebih kecil untuk layar lebih kecil */
+        box-shadow: none; /* Menghapus bayangan pada layar kecil */
+    }
+
+    #terdaftar, #invalid, #kosong {
+        font-size: 14px; /* Mengurangi ukuran font pada layar kecil */
+        top: 55%; /* Mengatur ulang posisi vertical */
+    }
+
+    input[type="text"], input[type="password"], button {
+        width: 100%; /* Lebar input dan tombol mengikuti lebar container */
+    }
+
+    .header {
+        font-size: 24px; /* Mengurangi ukuran font header */
+        padding: 8px 0; /* Menyesuaikan padding */
+    }
+
+    #sign-in-success {
+        width: 100%; /* Memastikan lebar sign-in success menyesuaikan layar kecil */
+    }
+
+    #loading-screen p {
+        font-size: 14px; /* Mengurangi ukuran font loading */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        font-size: 20px; /* Lebih kecil pada layar ponsel */
+    }
+
+    input[type="text"], input[type="password"], button {
+        padding: 8px; /* Mengurangi padding pada input dan tombol */
+        font-size: 14px; /* Mengurangi ukuran font */
+    }
+
+    #terdaftar, #invalid, #kosong {
+        font-size: 12px; /* Ukuran font lebih kecil pada ponsel */
     }
 }

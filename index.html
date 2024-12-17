@@ -17,6 +17,8 @@
         <p>Loading...</p>
     </div>
     <div class="container">
+        <p id="invalid" class="hidden">Password atau Username salah!</p>
+        <p id="terdaftar" class="hidden">Username sudah terdaftar!</p>
         <div class="header">Javagram</div>
         <!-- Succes Login Screen -->
         <div id="sign-in-success" class="hidden">
@@ -26,7 +28,6 @@
             <!-- Sign In Form -->
             <div id="sign-in-form" class="hidden">
                 <h3>Sign In</h3>
-                <p id="invalid" class="hidden">Password atau Username salah!</p>
                 <input type="text" id="signin-username" placeholder="Username" />
                 <input type="password" id="signin-password" placeholder="Password" />
                 <input type="checkbox" id="check" onclick="showPassword()">Show Password
@@ -39,7 +40,6 @@
             <!-- Sign Up Form -->
             <div id="sign-up-form" class="">
                 <h3>Sign Up</h3>
-                <p id="terdaftar" class="hidden">Username sudah terdaftar!</p>
                 <input type="text" id="signup-username" placeholder="Username" />
                 <input type="password" id="signup-password" placeholder="Password" />
                 <input type="checkbox" id="check" onclick="showPassword()">Show Password
