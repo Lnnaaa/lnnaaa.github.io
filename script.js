@@ -144,7 +144,7 @@ window.addEventListener("load", function () {
 
         // Tampilkan konten utama
         content.classList.remove("hidden");
-    }, 0); // 3000ms = 3 detik
+    }, 2000); // 3000ms = 3 detik
 });
 
 // Cek apakah user sudah login sebelumnya
