@@ -16,17 +16,7 @@ body {
 #invalid, #terdaftar {
     color: red;
     font-size: small;
-    position: absolute;
-}
-
-#invalid {
-    top: 55%;
-    right: 49.25%;
-}
-
-#terdaftar {
-    top: 55%;
-    right: 51%;
+    margin: -7.5px;
 }
 
 #h3-success {
